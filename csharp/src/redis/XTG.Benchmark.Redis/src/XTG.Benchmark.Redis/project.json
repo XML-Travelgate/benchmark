@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "emitEntryPoint": true
+  },
+
+  "dependencies": {
+    "Microsoft.Extensions.Configuration": "1.1.0-alpha1-21709",
+    "Microsoft.Extensions.Configuration.FileExtensions": "1.1.0-alpha1-21709",
+    "Microsoft.Extensions.Configuration.Json": "1.1.0-alpha1-21709",
+    "StackExchange.Redis": "1.1.605",
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.0"
+    },
+    "BenchmarkDotNet": "0.9.9",
+"BenchmarkDotNet.Core": "0.9.9"
+  },
+
+  "frameworks": {
+    "netcoreapp1.0": {
+      "imports": [
+        "portable-net461"
+      ]
+    }
+  },
+  "runtimeOptions": {
+    "configProperties": {
+      "System.GC.Server": true,
+      "System.GC.Concurrent": true,
+      "System.Threading.ThreadPool.MinThreads": 65534,
+      "System.Threading.ThreadPool.MaxThreads": 65534
+    }
+  }
+}

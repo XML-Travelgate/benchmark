@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E4F749E2-ACCD-4686-B5F4-E27D0A32899E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{89FE7248-3CC2-4769-B479-F6661216373E}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "XTG.Benchmark.Redis", "src\XTG.Benchmark.Redis\XTG.Benchmark.Redis.xproj", "{FAE367DE-E174-4BDB-AC1C-2AEAB15ED03F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAE367DE-E174-4BDB-AC1C-2AEAB15ED03F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAE367DE-E174-4BDB-AC1C-2AEAB15ED03F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAE367DE-E174-4BDB-AC1C-2AEAB15ED03F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAE367DE-E174-4BDB-AC1C-2AEAB15ED03F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FAE367DE-E174-4BDB-AC1C-2AEAB15ED03F} = {E4F749E2-ACCD-4686-B5F4-E27D0A32899E}
+	EndGlobalSection
+EndGlobal
