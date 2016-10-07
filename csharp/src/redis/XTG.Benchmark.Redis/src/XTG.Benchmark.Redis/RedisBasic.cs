@@ -191,6 +191,7 @@ namespace XTG.Benchmark.Redis
 
             int inumbstrings = Convert.ToInt32(nstrings);
             List<string> nthreads = threads.Split(',').ToList();
+            if (!nthreads.Contains("1")) { nthreads.Add("1"); }
 
             HashSet<string> ret = new HashSet<string>();
             for (int i = 0; i < inumbstrings; i++)
@@ -248,6 +249,7 @@ namespace XTG.Benchmark.Redis
             int nkey = Convert.ToInt32(keys);
             int nhashkeys = Convert.ToInt32(hashkeys);
             List<string> nthreads = threads.Split(',').ToList();
+            if (!nthreads.Contains("1")) { nthreads.Add("1"); }
 
             Dictionary<string, HashSet<string>> ret = new Dictionary<string, HashSet<string>>();
             for (int i = 0; i < nkey; i++)
@@ -293,10 +295,12 @@ namespace XTG.Benchmark.Redis
 
         private static void WriteResults(Dictionary<int, int> results)
         {
+            SortedDictionary<int, int> sd = new SortedDictionary<int, int>(results);
+
             Console.WriteLine("Results: \n");
 
             StringBuilder sb = new StringBuilder();
-            foreach (var kv in results)
+            foreach (var kv in sd)
             {
                 decimal aux = kv.Value / kv.Key;
                 decimal per = (aux / results[1]) * 100;
